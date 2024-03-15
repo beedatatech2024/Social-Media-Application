@@ -1,0 +1,124 @@
+.misk-misk{
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
+
+.head1{
+  font-size: 40px;
+  font-family: "Roboto";
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: black;
+}
+.para1{
+  font-size: 20px;
+  margin-bottom: 5px;
+color: black;
+}
+.flexcontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #8a3ab9 0%,#f77737 50% ,#405de6 100%);
+}
+.card1{
+  margin: 20px;
+  padding: 20px;
+  font-family: roboto;
+  background-color: rgb(219, 228, 228);
+  margin-top: 10px;
+}
+.img1{
+ height: 60px;
+ border-radius:30px;
+}
+.card2{
+  background-color: rgb(219, 228, 228);
+  margin: 20px;
+  height: 480px;
+  padding: 40px;
+  
+}
+.card3{
+  background-color: white;
+  margin: 20px;
+  width: 25%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(14, 13, 13, 0.678), 0 4px 20px 0 rgba(0, 0, 0, 0.603);
+  
+}
+img{
+  height: 30px;
+  padding: 20px;
+}
+.box{
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-items: center;
+  height: 50px;
+  color: white;
+}
+
+@keyframes mymove {
+  from {background-color: green;}
+  to {background-color: rgb(248, 116, 116);}
+}
+
+.head2{
+  font-size: 20px;
+  font-family: roboto;
+  padding-top: 10px;
+  color: black;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.para2{
+  font-size: 15px;
+  padding: 10px;
+
+}
+.container2{
+  display: flex;
+}
+
+
+
+.card4{
+  background-color: white;
+  margin: 25px;
+  height: 140px;
+width: 25%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(14, 13, 13, 0.678), 0 4px 20px 0 rgba(0, 0, 0, 0.603);
+  
+}
+img{
+  height: 30px;
+  padding: 20px;
+}
+.box1{
+  display: flex;
+  width: 25%;
+  padding-left: 50px;
+
+}
+.flex{
+  display: flex;
+}
+.head3{
+  font-size: 30px;
+  font-family: roboto;
+}
+
+.today-posts-spam{
+  font-weight: bold;
+}
+.posts-spam{
+  font-size: 16px;
+}
