@@ -69,9 +69,9 @@ function MediaCardsView() {
 
   //GET INSTAGRAM POSTS & FOLLOWERS
   useEffect(() => {
-    axios.get(`https://graph.facebook.com/v19.0/17841453213268234?fields=follows_count,media_count&access_token=${instaAccessToken}`)
+    axios.get(`https://graph.facebook.com/v19.0/17841453213268234?fields=followers_count,media_count&access_token=${instaAccessToken}`)
       .then(res =>{
-        setInstaFollowers(res.data.follows_count);
+        setInstaFollowers(res.data.followers_count);
         setInstaPosts(res.data.media_count)
       })
       .catch(err => {
@@ -119,7 +119,7 @@ function MediaCardsView() {
       imageAlt: "instagram",
       posts: instaPosts,
       todayPosts: todayInstaPosts,
-      colors: "to right, #8a3ab9 0%,#ffdc80 25% ,#f77737 50% ,#fd1d1d 75% ,#405de6 100%",
+      colors: "to right,white, #8a3ab9, #405de6",
       borderColor: "#8a3ab9"
     },
     {
@@ -127,7 +127,7 @@ function MediaCardsView() {
       path:"'https://www.linkedin.com/company/beedatatechnology/posts/?feedView=all",
       imgUrl: "linkedin.webp",
       imageAlt: "linkedin",
-      posts: 24,
+      posts: 136,
       todayPosts: 0,
       colors: "white,#1B51DA",
       borderColor: "#1B51DA"
@@ -137,10 +137,10 @@ function MediaCardsView() {
       path:"https://twitter.com/Beedata_",
       imgUrl: "twiter.png",
       imageAlt: "twitter",
-      posts: 68,
-      todayPosts: 0,
-      colors: "white,#1D9BF0",
-      borderColor: "#1D9BF0"
+      posts: instaPosts - 33,
+      todayPosts: todayInstaPosts,
+      colors: "white,#1A190C",
+      borderColor: "#1A190C"
     },
   ]
 
@@ -165,7 +165,7 @@ function MediaCardsView() {
       imgUrl: "instagram.webp",
       imageAlt: "instagram",
       followers: instaFollowers,
-      colors: "to right, #8a3ab9 0%,#ffdc80 25% ,#f77737 50% ,#fd1d1d 75% ,#405de6 100%",
+      colors: "to right,white, #8a3ab9, #405de6",
       borderColor: "#8a3ab9"
     },
     {
@@ -173,7 +173,7 @@ function MediaCardsView() {
       path:"'https://www.linkedin.com/company/beedatatechnology/posts/?feedView=all",
       imgUrl: "linkedin.webp",
       imageAlt: "linkedin",
-      followers: 34,
+      followers: 424,
       colors: "white,#1B51DA",
       borderColor: "#1B51DA"
     },
@@ -182,9 +182,9 @@ function MediaCardsView() {
       path:"https://twitter.com/Beedata_",
       imgUrl: "twiter.png",
       imageAlt: "twitter",
-      followers: 47,
-      colors: "white,#1D9BF0",
-      borderColor: "#1D9BF0"
+      followers: 34,
+      colors: "white,#1A190C",
+      borderColor: "#1A190C"
     },
   ]
 
@@ -208,6 +208,7 @@ function MediaCardsView() {
         </div>
       </div>
       <div className='card2'>
+      <h1 className='head3'>Posts:</h1>
       <div className='container2'>
         {upperCardsList.map(each => {
           return <a  style={{border:`2px solid ${each.borderColor}`}} href={each.path} target='_blank' rel="noreferrer" className='card3'>
@@ -221,7 +222,7 @@ function MediaCardsView() {
         })}
       </div>
         <div>
-          <h1 className='head3'>Followers</h1>
+          <h1 className='head3'>Followers:</h1>
         </div>
         <div>
           <div className='flex'>
@@ -231,7 +232,9 @@ function MediaCardsView() {
                           <img src={each.imgUrl} alt={each.imageAlt}/>
                           <h1 className='head2'>{each.name}</h1>
                         </div>
-                        <h2 style={{fontFamily:"Roboto"}}>Followers: {each.followers}</h2>
+                        <div className='bottom-head' >
+                        <h2 style={{fontFamily:"Roboto"}}>{each.followers} <spam className="posts-spam">Followers</spam></h2>
+                        </div>
                 </div>)
             })}
           </div>
